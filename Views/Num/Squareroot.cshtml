@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Square Root";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Square Root</h1>
+</div>
+@{
+    if(ViewBag.Result != null)
+    {
+        
+        @ViewBag.Result
+        
+    }
+}
+
+<div>
+    <form asp-controller="Num" asp-action="Squareroot" method="POST">
+        <input type="number" placeholder="First Number" name="firstnumber" required>
+        <input type="number" placeholder="Second Number" name="secondnumber" required>
+        <button type="submit">Submit</button>
+    </form>
+</div>
